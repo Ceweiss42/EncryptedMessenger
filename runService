@@ -1,0 +1,5 @@
+#!/bin/bash
+
+export FLASK_ENV=production
+
+/usr/local/bin/python3 /home/cameron/Desktop/Programming/Messenger/server.py

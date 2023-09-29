@@ -1,0 +1,5 @@
+{
+    "setup":false,
+    "email":"example@email.com",
+    "destination": "www.website.com"
+}
