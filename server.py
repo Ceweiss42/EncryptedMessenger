@@ -29,7 +29,7 @@ def getUserInput():
 
     if not setup:
         email = input("please enter an email to communicate to")
-        site = input("please enter a ngrok port to send to. (this should be the other person's port)")
+        site = input("please enter a ngrok port to send to. (this should be the other person's port)")+"/upload"
 
         info["email"] = email
         info["destination"] = site
