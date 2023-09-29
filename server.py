@@ -42,11 +42,11 @@ def getUserInput():
     
     while True:
         message = input()
-        with open("outgoing.txt", "w") as out:
+        with open("output.txt", "w") as out:
             out.write(message)
 
         os.system("gpg --encrypt --sign --armor -r " + info["email"] + " ./output.txt")
-        os.system("curl -X POST -F \"file=@outgoing.txt.asc\"" + info["destination"])
+        os.system("curl -X POST -F \"file=@output.txt.asc\" " + info["destination"])
 
 app = Flask(__name__)
 
