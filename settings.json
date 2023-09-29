@@ -1,5 +1,5 @@
 {
-    "setup":false,
-    "email":"example@email.com",
-    "destination": "www.website.com"
+    "setup": true,
+    "email": "cameron.weiss@student.csulb.edu",
+    "destination": "tesitng"
 }
