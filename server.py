@@ -25,7 +25,7 @@ def getUserInput():
         setup = info["setup"]
 
     if setup:
-        setup = input("Would you like to use the cached info? (Y/N)").lower == "y"
+        setup = input("Would you like to use the cached info? (Y/N)") == "Y"
 
     if not setup:
         email = input("please enter an email to communicate to")
@@ -45,7 +45,7 @@ def getUserInput():
         with open("output.txt", "w") as out:
             out.write(message)
 
-        os.system("gpg --encrypt --sign --armor -r " + info["email"] + " ./output.txt")
+        os.system("gpg --encrypt --yes --trust-model always --sign --armor -r " + info["email"] + " ./output.txt")
         os.system("curl -X POST -F \"file=@output.txt.asc\" " + info["destination"])
 
 app = Flask(__name__)
