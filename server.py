@@ -25,7 +25,7 @@ def getUserInput():
         setup = info["setup"]
 
     if setup:
-        setup = input("Would you like to use the cached info? (Y/N)").lower != "y"
+        setup = input("Would you like to use the cached info? (Y/N)").lower == "y"
 
     if not setup:
         email = input("please enter an email to communicate to")
